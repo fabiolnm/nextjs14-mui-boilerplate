@@ -1,3 +1,40 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    // https://github.com/airbnb/javascript
+    "airbnb",
+    // https://eslint.org/docs/latest/rules
+    "eslint:recommended",
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
+    "plugin:@typescript-eslint/recommended",
+    // https://web.dev/articles/vitals
+    "next/core-web-vitals",
+    // https://nextjs.org/docs/app/building-your-application/configuring/eslint#typescript
+    "next/typescript"
+  ],
+  // https://eslint.style/guide/migration#approach-1-migrate-to-single-plugin
+  "plugins": [
+    "@stylistic"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "semi": "off",
+    "@stylistic/semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "import/exports-last": "error",
+    "import/order": ["error", {
+      "groups": ["builtin", "external", "internal"],
+      "pathGroups": []
+    }],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["error", {
+      "code": 80, "tabWidth": 2, "ignoreUrls": true
+    }],
+    "no-console": ["error", {
+      "allow": ["info", "error"]
+    }],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
+  }
 }
