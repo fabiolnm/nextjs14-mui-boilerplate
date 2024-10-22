@@ -21,6 +21,7 @@
     "@stylistic/semi": ["error", "never"],
     "quotes": ["error", "single"],
     "import/exports-last": "error",
+    "import/prefer-default-export": "off",
     "import/order": ["error", {
       "groups": ["builtin", "external", "internal"],
       "pathGroups": []
@@ -35,6 +36,13 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-empty-object-type": "off"
+    "@typescript-eslint/no-empty-object-type": "off",
+    // https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
+    }]
   }
 }
