@@ -1,5 +1,6 @@
 import { CssBaseline } from '@mui/material'
 import type { Metadata } from 'next'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,10 +16,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <CssBaseline />
       </head>
       <body suppressHydrationWarning>
-        <CssBaseline />
-        {children}
+        <AppRouterCacheProvider>
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   )
