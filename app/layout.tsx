@@ -1,17 +1,9 @@
-import { CssBaseline } from '@mui/material'
-import { ThemeProvider } from '@mui/material/styles'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 
-import { theme } from './theme'
+import { roboto } from '@/theme/app-font'
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto',
-})
+import { AppTheme } from '../theme/app-theme'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -28,15 +20,12 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
+      {/* https://mui.com/material-ui/integrations/nextjs/#font-optimization */}
       <body suppressHydrationWarning className={roboto.variable}>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            {/* https://web.dev/articles/color-scheme */}
-            {/* https://mui.com/material-ui/react-css-baseline/#color-scheme */}
-            {/* https://mui.com/material-ui/customization/dark-mode/#:~:text=Adding%20%3CCssBaseline%20/%3E%20inside%20of%20the%20%3CThemeProvider%3E%20component%20will%20also%20enable%20dark%20mode%20for%20the%20app%27s%20background. */}
-            <CssBaseline enableColorScheme />
+          <AppTheme>
             {children}
-          </ThemeProvider>
+          </AppTheme>
         </AppRouterCacheProvider>
       </body>
     </html>
