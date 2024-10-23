@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "//": "https://nextjs.org/docs/pages/api-reference/cli/next#commands",
+    "//": "Includes all folders, not only app, components, and lib",
+    "lint": "next lint --dir ."
   },
   "dependencies": {
     "@emotion/cache": "^11.13.1",
