@@ -1,5 +1,10 @@
+import { Logo } from './logo'
+
 export default function Home() {
   return (
-    <>Hello</>
+    <>
+      <Logo sx={{ width: '100px', height: '100px' }} />
+      Hello
+    </>
   )
 }
