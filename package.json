@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "//": "https://nextjs.org/docs/pages/api-reference/cli/next#commands",
-    "//": "Includes all folders, not only app, components, and lib",
+    "////": "Includes all folders, not only app, components, and lib",
     "lint": "next lint --dir ."
   },
   "dependencies": {
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@stylistic/eslint-plugin": "^2.9.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20",
     "@types/react": "^18",
