@@ -18,6 +18,7 @@
     "@mui/icons-material": "^6.1.4",
     "@mui/material": "^6.1.4",
     "@mui/material-nextjs": "^6.1.4",
+    "@prisma/client": "^6.1.0",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
@@ -33,6 +34,7 @@
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "14.2.15",
+    "prisma": "^6.1.0",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.11.0"
   }
