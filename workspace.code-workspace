@@ -11,6 +11,12 @@
     "editor.action.indentUsingSpaces": true,
     "editor.action.indentationToSpaces": true,
     "envFile": "${workspaceFolder}/.env",
+    // https://www.youtube.com/watch?v=QXxy8Uv1LnQ
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
+    "[prisma]": {
+      "editor.formatOnSave": true
+    },
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "diffEditor.ignoreTrimWhitespace": true,
