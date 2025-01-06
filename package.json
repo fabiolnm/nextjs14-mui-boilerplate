@@ -10,6 +10,9 @@
     "////": "Includes all folders, not only app, components, and lib",
     "lint": "next lint --dir ."
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "dependencies": {
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.3",
